@@ -6,22 +6,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SumPipe implements PipeTransform {
   transform(numbersSeparatedByCommas: string): any {
     const numbers = this.getNumbers(numbersSeparatedByCommas);
-    const sum = this.getSum2(numbers);
+    const sum = this.getSum(numbers);
     return sum;
   }
 
-  getSum1(numbers: number[]) {
-    let sum = 0;
-
-    for (let number of numbers) {
-      sum += number;
-    }
-
-    return sum;
-  }
-
-  getSum2(numbers: number[]) {
-    return numbers.reduce((number, sum) => sum + number, 0);
+  getSum(numbers: number[]) {
+    // Todo: fix method!
+    return 0;
   }
 
   getNumbers(numbersSeparatedByCommas: string) {
